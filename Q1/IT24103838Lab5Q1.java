@@ -1,43 +1,33 @@
 import java.util.Scanner;
- 
- public class IT24104116Lab5Q3 {
-	public static final int ROOM_CHARGE_PER_DAY = 48000;
-	public static final int DISCOUNT_10_PRECENT = 10;
-	public static final int DISCOUNT_20_PRECENT = 20;
-	 public static final int MIN_DAYS_FOR_DISCOUNT = 3;
+public class IT24103838Lab5Q1 {
+	public static void main (String[] args) {
+		Scanner scanner  = new Scanner (System.in);
+	System.out.println ("Enter the first integer:");
+	int num1 = scanner.nextInt();
 	
-	public static void main (String[]args) {
-		Scanner scanner= new Scanner (System.in);
+	System.out.println ("Enter the second integer:");
+	int num2 = scanner.nextInt();
+	System.out.println ("Enter the third integer:");
+	int num3 = scanner.nextInt();
 		
-		System.out.println ("Enter the start date (1-31):");
-		int startDate = scanner.nextInt();
-		
-		System.out.println ("Enter the end date (1-31):");
-		int endDate = scanner.nextInt();
-		
-		if (startDate < 1 || startDate>31 || endDate < 1 || endDate > 31) {
-		System.out.println("Error : Start Date must be less than End Date");
-			return;
-		}
-		
-		if ( startDate >= endDate ) {
-			System.out.println("Error: Start date must be less than end date");
-			return;
-		}
-		int daysReserved = endDate - startDate;
-		
-		int numberOfDays = endDate - startDate + 1 ;
-		double discountRate= 0;
-		
-		if (numberOfDays >= MIN_DAYS_FOR_DISCOUNT) {
-            discountRate = numberOfDays >= 5 ? 20 : 10;
-		
-				}
-		
-		double discountAmount = (ROOM_CHARGE_PER_DAY * numberOfDays * discountRate)/100;
-		double totalAmount = (ROOM_CHARGE_PER_DAY * numberOfDays) - discountAmount;
-		
-		System.out.println("Number od days reserved: " + numberOfDays);
-		System.out.println("Total amount to be paid: Rs" + totalAmount);
-		}
+		int smallest = num1;
+		int largest = num1;
+	if (num2 < smallest) {
+	smallest = num2;
+	if (num2 < largest) {
+	largest = num2;
 	}
+	
+	if (num3 < smallest)	{
+	smallest = num3;
+	}
+	if (num3 < largest) {
+	largest = num3;
+	}
+	System.out.println ("User enterd numbers are:");
+	System.out.println ("Smallest number:" + smallest);
+	System.out.println ("Largest number:" + largest);
+	scanner.close();
+	}
+}
+}
