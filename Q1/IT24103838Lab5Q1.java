@@ -28,6 +28,6 @@ public class IT24103838Lab5Q1 {
 	System.out.println ("Smallest number:" + smallest);
 	System.out.println ("Largest number:" + largest);
 	scanner.close();
+		}
 	}
-}
 }
